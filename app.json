@@ -1,5 +1,15 @@
 {
+  "packagerOpts": {
+    "assetExts": ["ttf", "mp4"]
+  },
   "expo": {
-    "sdkVersion": "15.0.0"
+    "name": "MoviesNative",
+    "slug": "MoviesNative",
+    "sdkVersion": "15.0.0",
+    "privacy": "public",
+    "orientation": "portrait",
+    "packagerOpts": {
+      "assetExts": ["ttf", "mp4"]
+    }
   }
 }

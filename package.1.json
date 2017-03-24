@@ -1,0 +1,27 @@
+{
+  "name": "MoviesNative",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "jest-expo": "^0.3.0",
+    "react-native-scripts": "0.0.22",
+    "react-test-renderer": "~15.4.1"
+  },
+  "main": "AppExpo.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "expo": "^15.0.0",
+    "react": "~15.4.0",
+    "react-native": "https://github.com/exponent/react-native/archive/sdk-15.0.0.tar.gz"
+  }
+}
