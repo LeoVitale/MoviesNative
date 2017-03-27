@@ -7,5 +7,5 @@ export const searchMovies = (text) => {
 }
 
 export const getMovieDetails = () => {
-  return axios.get(`https://api.themoviedb.org/3/movie/283995?language=pt-BR&api_key=${API_KEY}`)
+  return axios.get(`https://api.themoviedb.org/3/movie/118340?language=pt-BR&api_key=${API_KEY}`)
 }

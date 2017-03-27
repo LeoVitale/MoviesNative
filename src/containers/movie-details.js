@@ -6,6 +6,7 @@ import { LinearGradient } from 'expo';
 import { getMovieDetails } from '../api';
 import { ImageUrl } from '../api/api-url';
 import { movieDetailsStyles } from '../styles/movie-details.style';
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 
 // create a component
@@ -40,6 +41,17 @@ class MovieDetails extends Component {
                 style={styles.backDropImage}
                 source={{ uri: `${ImageUrl}w780${details.backdrop_path}` }} />
               <LinearGradient style={styles.metadata} colors={['transparent', '#000000ff']} >
+                <AnimatedCircularProgress
+                  size={80}
+                  width={5}
+                  fill={Math.floor((parseFloat(details.vote_average) / 10) * 100)}
+                  style={{ backgroundColor: 'transparent', flex:1, justifyContent: 'center',alignItems: 'center', marginBottom:40}}
+                  tintColor="#ffffff"
+                  backgroundColor="#ffffff33" >
+                    {
+                      (fill) => (<Text style={styles.points}>{details.vote_average}</Text>)
+                    }
+                  </AnimatedCircularProgress>
                 <Text
                   style={styles.title}>
                   {details.title.toUpperCase()}
@@ -66,3 +78,4 @@ class MovieDetails extends Component {
 export default MovieDetails;
 
 const styles = StyleSheet.create(movieDetailsStyles);
+

@@ -27,7 +27,7 @@ export const movieDetailsStyles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 50,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   title: {
     ...defaultText,
@@ -47,6 +47,16 @@ export const movieDetailsStyles = {
     fontSize: 14,
     letterSpacing: 0.2,
     lineHeight:16
+  },
+  points: {
+    backgroundColor: 'transparent',
+    position: 'absolute',
+    top: 30,
+    left: 0,
+    width: '100%',
+    textAlign: 'center',
+    color: '#ffffff',
+    fontSize: 20,
+    fontWeight: "bold"
   }
-  
 };

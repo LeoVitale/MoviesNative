@@ -4201,6 +4201,12 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
+react-native-circular-progress@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/react-native-circular-progress/-/react-native-circular-progress-0.0.8.tgz#53ccdbe57357ce2459f8ab1b67119a3e2a5014b4"
+  dependencies:
+    art "^0.10.0"
+
 "react-native-fbads@https://github.com/callstack-io/react-native-fbads/tarball/v4.1.0":
   version "4.1.0"
   resolved "https://github.com/callstack-io/react-native-fbads/tarball/v4.1.0#e836ed7f4502593d4a4757f27cdfa0ffef4dc729"
