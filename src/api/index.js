@@ -1,6 +1,11 @@
 import axios from 'axios';
 
-export const searchMovies = (text) => {
+const API_KEY = 'bf51ad798857bbf879713ddc03fa0eca';
 
-    return axios.get(`https://www.omdbapi.com/?s=${text}`)
+export const searchMovies = (text) => {
+  return axios.get(`https://www.omdbapi.com/?s=${text}`)
+}
+
+export const getMovieDetails = () => {
+  return axios.get(`https://api.themoviedb.org/3/movie/283995?language=pt-BR&api_key=${API_KEY}`)
 }

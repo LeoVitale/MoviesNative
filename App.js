@@ -1,8 +1,9 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import MovieList from './src/components/movie-list';
+import MovieDetails from './src/containers/movie-details';
 
-import {searchMovies} from './src/api';
+import { searchMovies } from './src/api';
 
 export default class App extends React.Component {
 
@@ -17,7 +18,7 @@ export default class App extends React.Component {
   componentWillMount() {
 
     searchMovies('batman').then(response => {
-      if (response.data.Search) 
+      if (response.data.Search)
         this.setState({
           ...this.state,
           movies: response.data.Search
@@ -26,23 +27,13 @@ export default class App extends React.Component {
   }
 
   render() {
-    const {movies} = this.state;
+    const { movies } = this.state;
     return (
-      <View style={styles.container}>
-        {/*Open up App.js to start working on your app!
-          Change you make will automatically reload.
-          Shake your phone to open the developer menu.*/}
-        <MovieList movies={movies}/>
+      <View style={{ flex: 1 }}>
+        <StatusBar
+          barStyle="light-content"/>
+        <MovieDetails/>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
